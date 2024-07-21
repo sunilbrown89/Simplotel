@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <title>Simplotel Sunil</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 10px;
+      padding-right: 10px;
+      background-color: white;
+      color: #292121;
+      border: "1px solid black";
+    }
+
+    .img {
+      height: 70px;
+      /* width: 60px; */
+    }
+
+    .navbar ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      gap: 40px;
+    }
+
+    .navbar ul li {
+      margin: 0 15px;
+    }
+
+    .navbar ul li a {
+      color: #0f0e0e;
+      text-decoration: none;
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    .navbar .icons a {
+      margin: 0 10px;
+      color: #fff;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    .navbar .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .navbar .hamburger span {
+      height: 3px;
+      width: 25px;
+      background: #fff;
+      margin: 4px;
+      transition: all 0.3s;
+    }
+
+    .imgmain {
+      height: 100vh;
+      width: 100%;
+    }
+
+    .mainPara {
+      padding: 30px;
+      display: flex;
+      text-align: center;
+      /* font-size: 18px; */
+      gap: 100px;
+      background-color: rgb(197, 194, 194);
+    }
+
+    .gridDives {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      gap: 20px;
+    }
+
+    .gridimgs {
+      height: 250px;
+
+    }
+
+    .gridmainsDi {
+      padding: 50px;
+
+    }
+
+    .paddingRight {
+      padding-right: 20px;
+    }
+
+    .mainImgDivF {
+      position: relative;
+    }
+
+    .ButtonImage {
+      position: absolute;
+      left: 5%;
+      bottom: 5%;
+    }
+
+    .gridHeading {
+      font-size: 50px;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+
+    }
+
+    .menu-toggle span {
+      background-color: #141313;
+      height: 3px;
+      width: 25px;
+      margin: 5px 0;
+      display: block;
+    }
+
+    .mainPara p {
+      font-size: 22px;
+      /* font-weight: bold; */
+      font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: medium;
+  line-height: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .navbar ul {
+        flex-direction: column;
+        left: 0px;
+        gap: 10px;
+        display: none;
+        padding: 15px 15px 15px 15px;
+        width: 92%;
+        position: absolute;
+        top: 8%;
+        z-index: 1;
+        background-color: white;
+      }
+
+      .navbar ul li a {
+        font-size: 18px;
+        font-weight: 300;
+        color: black;
+      }
+
+      .gridHeading {
+        font-size: 30px;
+      }
+
+      .ButtonImage {
+        position: absolute;
+        left: 5%;
+        height: 30px;
+        bottom: 15%;
+      }
+
+      .paddingRight {
+        padding-right: 0px;
+      }
+
+      .mainPara {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .navbar ul.active {
+        display: flex;
+      }
+
+      .navbar .hamburger {
+        display: flex;
+      }
+
+      .imgmain {
+        width: 100%;
+        height: 240px;
+      }
+
+      .gridimgs {
+        height: 200px;
+        width: 100%;
+      }
+
+      .gridDives {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+      }
+
+      .gridmainsDi {
+        padding: 20px;
+      }
+
+      .icons {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: flex;
+        margin-left: 15px;
+      }
+
+      /* .ButtonImage{
+          display: none;
+        } */
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="./img/phoenix-logo.png" alt="" class="img" />
+      </div>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Order Food</a></li>
+        <li><a href="#">Restaurant</a></li>
+        <li><a href="#">Testimonial</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      <div class="icons">
+        <img src="./img/HTML_CSS_ASSIGNMENT.png" alt="" class="icons" />
+      </div>
+    </nav>
+    <header>
+      <div class="mainImgDivF">
+        <img src="./img/heroimg.jpg" alt="" class="imgmain" />
+        <img src="./img/button img.png" alt="" class="ButtonImage">
+      </div>
+      <div class="mainPara">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. In iste
+          consequatur, est at odio minus sequi libero blanditiis quibusdam,
+
+        </p>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. In iste
+          consequatur, est at odio minus sequi libero blanditiis quibusdam,
+
+        </p>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. In iste
+          consequatur, est at odio minus sequi libero blanditiis quibusdam,
+
+      </div>
+    </header>
+    <article style="background-color: rgb(214, 214, 210);">
+      <div class="gridmainsDi">
+        <h1 class="gridHeading"> Lorem ipsum </h1>
+        <div class="gridDives">
+          <div>
+            <img src="./img/rooms.jpg" alt="" class="gridimgs">
+            <div>
+              <h3 style=" padding-top: 25px;">ROOMS</h3>
+              <p style=" padding-right: 20px; width: 80%; padding-top: 10px;  font-weight: bold;">
+                Lorem ipsum dolor sit amet consectetur adipisi Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                In iste
+                consequatur,</p>
+              <div style="display: flex; justify-content: start; padding-top: 20px;">
+                <button style="background-color: #0f0e0e; color: white; padding: 10px 30px;">Learn More</button>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex; justify-content: center"><img src="./img/dining.jpg" alt="" class="gridimgs"
+                ></div>
+            <div style="display: flex ; flex-direction: column ; align-items: center; justify-content: center;">
+              <h3 style="text-align: center; padding-top: 20px;">DINNING</h3>
+              <p style=" text-align: center; width: 80%; padding-left: 20px; font-weight: bold;">Lorem
+                ipsum dolor sit amet consectetur adipisi Lorem ipsum dolor, sit amet consectetur adipisicing elit. In
+                iste
+                consequatur,
+              </p>
+              <div style="display: flex; justify-content: center; padding-top: 20px;">
+                <button style="background-color: #0f0e0e; color: white; padding: 10px 30px;">Learn More</button>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div style="display:flex; justify-content: end"> <img src="./img/pool.jpg" alt="" class="gridimgs"></div>
+            <div style="display: flex ; flex-direction: column ; align-items: end; justify-content: end;">
+              <h3 style="text-align: right; padding-top: 20px; ">POOLS</h3>
+              <p style="text-align: right; width: 80%;  font-weight: bold;">Lorem ipsum dolor sit amet consectetur
+                adipisi Lorem ipsum dolor, sit amet consectetur adipisicing elit. In iste
+                consequatur,</p>
+              <div style="display: flex; justify-content: end;padding-top: 20px;">
+                <button style="background-color: #0f0e0e; color: white; padding: 10px 30px;">Learn More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </article>
+    </p>
+  </section>
+  <script>
+    function toggleMenu() {
+      const menu = document.querySelector(".navbar ul");
+      menu.classList.toggle("active");
+    }
+  </script>
+</body>
+
+</html>
