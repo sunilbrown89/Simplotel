@@ -1,0 +1,300 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: white;
+  color: #292121;
+  border: "1px solid black";
+}
+
+.img {
+  height: 70px;
+  /* width: 60px; */
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 40px;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  color: #0f0e0e;
+  text-decoration: none;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.navbar .icons a {
+  margin: 0 10px;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.navbar .hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.navbar .hamburger span {
+  height: 3px;
+  width: 25px;
+  background: #fff;
+  margin: 4px;
+  transition: all 0.3s;
+}
+
+.imgmain {
+  height: 100vh;
+  width: 100%;
+}
+
+.mainPara {
+  padding: 30px;
+  display: flex;
+  text-align: center;
+  /* font-size: 18px; */
+  gap: 100px;
+  background-color: rgb(197, 194, 194);
+}
+
+
+
+.paddingRight {
+  padding-right: 20px;
+}
+
+.heroImage {
+  position: relative;
+}
+
+.ButtonImage {
+  position: absolute;
+  left: 5%;
+  bottom: 5%;
+}
+
+.section3Heading {
+  font-size: 50px;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  background-color: #141313;
+  height: 3px;
+  width: 25px;
+  margin: 5px 0;
+  display: block;
+}
+
+.mainPara p {
+  font-size: 22px;
+  /* font-weight: bold; */
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: medium;
+  line-height: 2rem;
+}
+
+.section3 {
+  padding: 50px;
+  border: 1px solid black;
+}
+.section3MainDiv {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px;
+  border: 3px solid rgb(128, 0, 128);
+}
+
+.section3Images {
+  height: 290px;
+  width: 100%;
+}
+
+
+#section3SubDivs {
+  border: 2px solid rgb(255, 123, 0);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.section3SubDiv1 > div > div:nth-of-type(1){
+  display: flex; justify-content: left;
+}
+.section3SubDiv1 > div > div:nth-of-type(1) > p {
+  width: 90%; 
+  font-weight: bold; 
+  line-height: 1.4rem;
+}
+.section3SubDiv1 > div > div:nth-of-type(2) {
+  display: flex;
+  justify-content: start;
+  padding-top: 10px;
+}
+.section3SubDiv1 > div > div:nth-of-type(2) > button {
+  background-color: #0f0e0e;
+  color: white;
+  padding: 10px 30px;
+}
+
+.section3SubDiv2 > div > div:nth-of-type(1){
+  display: flex; justify-content: center
+}
+
+.section3SubDiv2 > div > div:nth-of-type(1) > p {
+  width: 90%; 
+  font-weight: bold; 
+  line-height: 1.4rem
+}
+.section3SubDiv2 > div > div:nth-of-type(2) {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+.section3SubDiv2 > div > div:nth-of-type(2) > button {
+  background-color: #0f0e0e;
+  color: white;
+  padding: 10px 30px;
+}
+.section3SubDiv3 > div{
+  text-align: right;
+}
+.section3SubDiv3 > div > div:nth-of-type(1){
+  display: flex; justify-content: end
+}
+
+.section3SubDiv3 > div > div:nth-of-type(1) > p {
+  width: 90%;
+  font-weight: bold;
+  line-height: 1.4rem;
+  display: flex;
+  justify-content: end;
+}
+.section3SubDiv3 > div > div:nth-of-type(2) {
+  display: flex; justify-content: end; padding-top: 10px
+}
+.section3SubDiv3 > div > div:nth-of-type(2) > button {
+  background-color: #0f0e0e;
+  color: white;
+  padding: 10px 30px;
+}
+@media all and (min-width: 380px) and (max-width: 700px) {
+  .menu-toggle {
+    display: flex;
+    margin-left: 15px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    left: 0px;
+    gap: 10px;
+    display: none;
+    padding: 15px 15px 15px 15px;
+    width: 92%;
+    position: absolute;
+    top: 20%;
+    z-index: 1;
+    background-color: white;
+  }
+}
+/* @media (max-width: 768px)  */ 
+/* Small Screen */
+@media all and (min-width: 50px) and (max-width: 379px)
+{
+  .navbar ul {
+    flex-direction: column;
+    left: 0px;
+    gap: 10px;
+    display: none;
+    padding: 15px 15px 15px 15px;
+    width: 92%;
+    position: absolute;
+    top: 8%;
+    z-index: 1;
+    background-color: white;
+  }
+
+  .navbar ul li a {
+    font-size: 18px;
+    font-weight: 300;
+    color: black;
+  }
+
+  .section3Heading {
+    font-size: 30px;
+  }
+
+  .ButtonImage {
+    position: absolute;
+    left: 5%;
+    height: 30px;
+    bottom: 15%;
+  }
+
+  .paddingRight {
+    padding-right: 0px;
+  }
+
+  .mainPara {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar ul.active {
+    display: flex;
+  }
+
+  .navbar .hamburger {
+    display: flex;
+  }
+
+  .imgmain {
+    width: 100%;
+    height: 240px;
+  }
+
+  .section3Images {
+    height: 200px;
+    width: 100%;
+  }
+
+  .section3MainDiv {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .section3 {
+    padding: 20px;
+  }
+
+  .icons {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+    margin-left: 15px;
+  }
+}
